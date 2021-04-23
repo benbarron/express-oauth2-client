@@ -40,7 +40,7 @@ app.listen(8000, () => {
 });
 ```
 
-#### Providers config object
+#### Providers config object structure
 
 ```json
 {
@@ -51,7 +51,7 @@ app.listen(8000, () => {
   },
   "twitter": {
     "clientId": "",
-    "clientSecret":"",
+    "clientSecret": "",
     "scopes": ["profile", "email"]
   },
   "google": {
@@ -59,6 +59,7 @@ app.listen(8000, () => {
     "clientSecret": "",
     "scopes": ["profile", "email"]
   }
+}
 ```
 
 #### Registering Callbacks
@@ -68,41 +69,6 @@ So for example, if you set the prefix in the options as '/oauth2' and the provid
 
 #### Supported Providers
 
-<style>
-img[alt=Twitter] {
-  width: 120px;
-  height: 65px;
-  margin: auto;
-}
-img[alt=Github] {
-  width: 120px;
-  height: 70px;
-  margin: auto;
-}
-img[alt=Google] {
-  width: 100px;
-  height: 80px;
-  margin: auto;
-}
-</style>
-
-<table>
-<tr>
-  <td> 
-  
-  ![Twitter](https://logos-world.net/wp-content/uploads/2020/04/Twitter-Symbol.png)
-
-  </td>
-
-  <td>
-  
-  ![Github](https://www.sferalabs.cc/wp-content/uploads/github-logo.png)
-
-  </td>
-
-  <td>
-  
-  ![Google](https://lh3.googleusercontent.com/proxy/OyPLclM1SmYHi36jBcEau_bGKmF5wzkfzdJSg0OfuuxSDw_W1v9VxuA4QHRAgb7QI50KyghA_KTpuhTejQHXMCWnReqVNN0)
-  </td>
-</tr>
-</table>
+- Github
+- Google
+- Twitter
