@@ -7,6 +7,10 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - name: 'Set git info'
+        run: |
+          git config --global user.name benbarron
+          git config --global user.email benbarron@protonmail.com
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:

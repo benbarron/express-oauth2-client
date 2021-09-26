@@ -13,19 +13,12 @@ jobs:
         run: |
           git config --global user.name benbarron
           git config --global user.email benbarron@protonmail.com
-
       - name: 'Checkout'
         uses: actions/checkout@v2
-
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-
-      - name: 'Version check'
-        uses: reedyuk/npm-version@1.1.1
-        with:
-          version: '1.0.1'
-          # package: '/'
-          git-tag-version: 'true'
+      - name: Version Check
+        uses: EndBug/version-check@v2.0.1
       - run: npm ci
       - run: npm test
