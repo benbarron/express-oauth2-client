@@ -72,3 +72,4 @@ So for example, if you set the prefix in the options as '/oauth2' and the provid
 - Github
 - Google
 - Twitter
+
