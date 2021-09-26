@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: 'Set git info'
         run: |
-          git config user.name benbarron
-          git config user.email benbarron@protonmail.com
+          git config --global user.name benbarron
+          git config --global user.email benbarron@protonmail.com
 
       - name: 'Checkout'
         uses: actions/checkout@v2
