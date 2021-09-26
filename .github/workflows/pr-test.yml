@@ -20,6 +20,7 @@ jobs:
           node-version: 14
       - name: Check package version
         run: |
+          git fetch origin master:master
           PACK_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')
           MASTER_VERSION=$(git show master:package.json | cat | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')
           if ["$PACK_VERSION" == "$MASTER_VERSION"]; then
