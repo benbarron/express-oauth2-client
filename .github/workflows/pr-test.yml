@@ -13,7 +13,7 @@ jobs:
         run: |
           git config user.name benbarron
           git config user.email benbarron@protonmail.com
-        with:
+        env:
           - GIT_AUTHOR_NAME: benbarron
           - GIT_AUTHOR_EMAIL: benbarron@protonmail.com
 
