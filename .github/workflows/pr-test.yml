@@ -1,0 +1,23 @@
+name: PR Tests For express-oauth2-client
+
+on:
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: 'Version check'
+        uses: reedyuk/npm-version@1.1.1
+        with:
+          version: '1.0.1'
+          # package: '/'
+          git-tag-version: 'true'
+      - run: npm ci
+      - run: npm test
