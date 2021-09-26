@@ -9,18 +9,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout'
-        uses: actions/checkout@v2
-        # run: |
-        #   git config user.name benbarron
-        #   git config user.email benbarron@protonmail.com
+      - name: 'Set git info'
+        run: |
+          git config user.name benbarron
+          git config user.email benbarron@protonmail.com
         with:
           - GIT_AUTHOR_NAME: benbarron
           - GIT_AUTHOR_EMAIL: benbarron@protonmail.com
 
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+
       - uses: actions/setup-node@v2
         with:
           node-version: 14
+
       - name: 'Version check'
         uses: reedyuk/npm-version@1.1.1
         with:
